@@ -1,7 +1,8 @@
+import React from 'react'
 
-function App() {
+function App () {
   return (
-    <>empty text</>
+    <p>empty text</p>
   )
 }
 
