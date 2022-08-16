@@ -7,28 +7,24 @@ export default defineConfig({
   resolve: {
     alias: [
       {
-        '@': path.resolve(__dirname, 'src')
+        find: '@',
+        replacement: path.resolve(__dirname, 'src')
       },
       {
-        '@components': path.resolve(__dirname, 'src/components')
+        find: '@pages',
+        replacement: path.resolve(__dirname, 'src/pages')
       },
       {
-        '@pages': path.resolve(__dirname, 'src/pages')
+        find: '@assets',
+        replacement: path.resolve(__dirname, 'src/assets')
       },
       {
-        '@assets': path.resolve(__dirname, 'src/assets')
+        find: '@navigation',
+        replacement: path.resolve(__dirname, 'src/navigation')
       },
       {
-        '@hooks': path.resolve(__dirname, 'src/hooks')
-      },
-      {
-        '@layouts': path.resolve(__dirname, 'src/layouts')
-      },
-      {
-        '@navigation': path.resolve(__dirname, 'src/navigation')
-      },
-      {
-        '@styles': path.resolve(__dirname, 'src/styles')
+        find: '@styles',
+        replacement: path.resolve(__dirname, 'src/styles')
       }
     ]
   }
