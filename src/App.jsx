@@ -1,8 +1,10 @@
 import React from 'react'
 
+import Routing from '@navigation/routes'
+
 function App () {
   return (
-    <p>empty text</p>
+    <Routing />
   )
 }
 
