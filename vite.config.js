@@ -29,6 +29,10 @@ export default defineConfig({
       {
         find: '@components',
         replacement: path.resolve(__dirname, 'src/components')
+      },
+      {
+        find: '@layouts',
+        replacement: path.resolve(__dirname, 'src/layouts')
       }
     ]
   }
