@@ -2,7 +2,7 @@ import React from 'react'
 
 import Head from '@components/head'
 import MainLayout from '@layouts/main-layout'
-import Header from '@components/header'
+import { Header, LatestJobs } from './blocks/_index'
 
 export default function Home () {
   return (
@@ -12,7 +12,7 @@ export default function Home () {
       </Head>
       <Header />
       <MainLayout>
-        {/* <h1 className="text-xl">Home Page</h1> */}
+        <LatestJobs />
       </MainLayout>
     </>
   )
