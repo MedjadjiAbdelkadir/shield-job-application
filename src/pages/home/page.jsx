@@ -2,7 +2,7 @@ import React from 'react'
 
 import Head from '@components/head'
 import MainLayout from '@layouts/main-layout'
-import { Header, LatestJobs } from './blocks/_index'
+import { Header, LatestJobs, GetReady } from './blocks/_index'
 
 export default function Home () {
   return (
@@ -13,6 +13,7 @@ export default function Home () {
       <Header />
       <MainLayout>
         <LatestJobs />
+        <GetReady />
       </MainLayout>
     </>
   )
