@@ -15,7 +15,7 @@ export default function Navbar () {
                         <Link to="/login" className="rounded font-medium py-2 px-4 text-white">Login</Link>
                     </li>
                     <li>
-                        <Link to="/register" className="bg-blue-600 text-white rounded font-medium py-2 px-4">Register</Link>
+                        <Link to="/register" className="bg-blue-600 text-white rounded font-medium py-1 md:py-2 px-3 md:px-4">Register</Link>
                     </li>
                 </ul>
             </div>

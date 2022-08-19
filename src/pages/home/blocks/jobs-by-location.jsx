@@ -52,10 +52,10 @@ const jobsLocation = [
 
 export default function JobsByLocation () {
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-10 md:py-16 bg-gray-50">
       <Container>
-        <h2 className="font-semibold text-4xl text-gray-900 mb-8">Browse Jobs by Location</h2>
-        <ul className="grid grid-flow-rows grid-cols-4 gap-4">
+        <h2 className="font-semibold text-2xl md:text-3xl lg:text-4xl text-gray-900 mb-8">Browse Jobs by Location</h2>
+        <ul className="grid grid-flow-rows grid-cols-2 md:grid-cols-4 gap-4">
           {
             jobsLocation.map(({ loction }) => <JobByLocation loction={loction} key={loction} />)
           }

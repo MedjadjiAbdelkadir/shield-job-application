@@ -37,9 +37,9 @@ const latestJobs = [
 
 export default function LatestJobs () {
   return (
-    <section className="py-16">
+    <section className="py-10 md:py-16">
       <Container>
-        <h2 className="font-semibold text-4xl text-gray-900 mb-4">Latest jobs</h2>
+        <h2 className="font-semibold text-2xl md:text-3xl lg:text-4xl text-gray-900 mb-4">Latest jobs</h2>
         <ul className="flex flex-wrap">
           {
             latestJobs.map(job => <Job job={job} key={job.title} />)
@@ -52,9 +52,9 @@ export default function LatestJobs () {
 
 const Job = ({ job }) => {
   return (
-    <li className="flex flex-col w-1/4 p-1">
+    <li className="flex flex-col w-full md:w-1/2 lg:w-1/4 p-1">
       <div className="flex-1 px-6 py-6 border-2 border-solid border-gray-200 rounded-sm">
-          <h3 className="text-lg font-medium text-blue-500 truncate">
+          <h3 className="text-base md:text-lg font-medium text-blue-500 truncate">
             <a href="#">{job.title}</a>
           </h3>
           <p className="text-gray-600 text-md">
