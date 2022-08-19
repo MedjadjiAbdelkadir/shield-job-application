@@ -2,6 +2,8 @@ import React from 'react'
 
 import PropTypes from 'prop-types'
 
+import { Container } from '@components/_index'
+
 const careerLevels = [
   {
     title: 'Entry Level'
@@ -23,14 +25,14 @@ const careerLevels = [
 export default function JobsByCareerLevel () {
   return (
     <section className="py-16">
-      <div className="container mx-auto max-w-6xl">
+      <Container maxW="5xl">
         <h2 className="font-semibold text-4xl text-gray-900 mb-8">Browse Jobs by Career Level</h2>
         <ul className="flex flex-wrap">
           {
             careerLevels.map(({ title }) => <JobByCareerLevel title={title} key={title} />)
           }
         </ul>
-      </div>
+      </Container>
     </section>
   )
 }

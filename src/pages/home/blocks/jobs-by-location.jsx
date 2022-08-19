@@ -3,6 +3,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
+import { Container } from '@components/_index'
+
 const jobsLocation = [
   {
     loction: 'Jobs in Algiers'
@@ -51,14 +53,14 @@ const jobsLocation = [
 export default function JobsByLocation () {
   return (
     <section className="py-16 bg-gray-50">
-      <div className="container mx-auto max-w-6xl">
+      <Container maxW="5xl">
         <h2 className="font-semibold text-4xl text-gray-900 mb-8">Browse Jobs by Location</h2>
         <ul className="grid grid-flow-rows grid-cols-4 gap-4">
           {
             jobsLocation.map(({ loction }) => <JobByLocation loction={loction} key={loction} />)
           }
         </ul>
-      </div>
+      </Container>
     </section>
   )
 }

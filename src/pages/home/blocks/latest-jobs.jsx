@@ -2,6 +2,8 @@ import React from 'react'
 
 import PropTypes from 'prop-types'
 
+import { Container } from '@components/_index'
+
 const latestJobs = [
   {
     title: 'Customer Service Officer',
@@ -36,14 +38,14 @@ const latestJobs = [
 export default function LatestJobs () {
   return (
     <section className="py-16">
-        <div className="container mx-auto max-w-6xl">
-            <h2 className="font-semibold text-4xl text-gray-900 mb-4">Latest jobs</h2>
-            <ul className="flex flex-wrap">
-              {
-                latestJobs.map(job => <Job job={job} key={job.title} />)
-              }
-            </ul>
-        </div>
+      <Container maxW="5xl">
+        <h2 className="font-semibold text-4xl text-gray-900 mb-4">Latest jobs</h2>
+        <ul className="flex flex-wrap">
+          {
+            latestJobs.map(job => <Job job={job} key={job.title} />)
+          }
+        </ul>
+      </Container>
     </section>
   )
 }
