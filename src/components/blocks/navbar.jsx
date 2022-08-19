@@ -7,7 +7,7 @@ import { Container } from '@components/_index'
 export default function Navbar () {
   return (
     <nav className="bg-opacity-80 h-16 absolute top-0 w-full">
-        <Container maxW="5xl">
+        <Container>
             <div className="flex justify-between align-middle items-center h-full">
                 <Link to="/" className="text-white text-xl font-semibold">Shield</Link>
                 <ul className="flex gap-3">

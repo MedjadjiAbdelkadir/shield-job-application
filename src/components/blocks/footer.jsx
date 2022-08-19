@@ -5,7 +5,7 @@ import { Container } from '@components/_index'
 export default function Footer () {
   return (
     <footer className="bg-blue-900 py-16 font-poppins">
-      <Container maxW="5xl">
+      <Container>
         <div className="flex flex-col md:flex-row justify-between">
         <div className="flex flex-col">
           <a href="/" className="text-white text-2xl font-semibold">Shield</a>

@@ -25,7 +25,7 @@ const careerLevels = [
 export default function JobsByCareerLevel () {
   return (
     <section className="py-16">
-      <Container maxW="5xl">
+      <Container >
         <h2 className="font-semibold text-4xl text-gray-900 mb-8">Browse Jobs by Career Level</h2>
         <ul className="flex flex-wrap">
           {

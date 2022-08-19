@@ -38,7 +38,7 @@ const latestJobs = [
 export default function LatestJobs () {
   return (
     <section className="py-16">
-      <Container maxW="5xl">
+      <Container>
         <h2 className="font-semibold text-4xl text-gray-900 mb-4">Latest jobs</h2>
         <ul className="flex flex-wrap">
           {

@@ -2,10 +2,9 @@ import React from 'react'
 
 import PropTypes from 'prop-types'
 
-export default function Container ({ maxW, children }) {
-  const classesList = `container mx-auto h-full relative max-w-${maxW}`
+export default function Container ({ children }) {
   return (
-    <div className={classesList}>{children}</div>
+    <div className="container mx-auto h-full relative max-w-6xl">{children}</div>
   )
 }
 

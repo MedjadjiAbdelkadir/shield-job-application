@@ -53,7 +53,7 @@ const jobsLocation = [
 export default function JobsByLocation () {
   return (
     <section className="py-16 bg-gray-50">
-      <Container maxW="5xl">
+      <Container>
         <h2 className="font-semibold text-4xl text-gray-900 mb-8">Browse Jobs by Location</h2>
         <ul className="grid grid-flow-rows grid-cols-4 gap-4">
           {
