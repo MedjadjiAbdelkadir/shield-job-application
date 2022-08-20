@@ -2,16 +2,20 @@ import React from 'react'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import { Home, Login } from '@pages/_index'
+import { Home, Login, Register } from '@pages/_index'
 
 const routes = [
   {
     path: '/',
-    element: <Home/>
+    element: <Home />
   },
   {
     path: '/login',
     element: <Login />
+  },
+  {
+    path: '/register',
+    element: <Register />
   }
 ]
 

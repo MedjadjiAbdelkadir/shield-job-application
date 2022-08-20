@@ -7,7 +7,7 @@ export default function Login () {
   return (
     <>
       <Head>
-        <title>Home | Shield</title>
+        <title>Login | Shield</title>
       </Head>
       <main>
         <LoginForm />
