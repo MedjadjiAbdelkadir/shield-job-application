@@ -9,7 +9,9 @@ export default function Login () {
       <Head>
         <title>Home | Shield</title>
       </Head>
-      <LoginForm />
+      <main>
+        <LoginForm />
+      </main>
     </>
   )
 }
