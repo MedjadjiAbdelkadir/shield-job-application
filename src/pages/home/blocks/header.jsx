@@ -7,7 +7,7 @@ export default function Header () {
   return (
     <header className="h-screen bg-blue-600 relative bg-center bg-cover font-poppins" style={{ backgroundImage: `url(${headerImage})` }}>
         <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-60"></div>
-        <Container>
+        <Container extraClasses="h-full relative">
             <div className="flex justify-between items-center h-full">
                 <div className="w-full md:w-3/4">
                     <h1 className="text-white text-3xl sm:text-4xl  md:text-5xl lg:text-6xl font-medium capitalize mb-5 text-center md:text-left">find thousands of jobs that match your passion</h1>
