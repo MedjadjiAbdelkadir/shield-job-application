@@ -58,7 +58,7 @@ const JobCard = ({ title, company, location, type }) => {
     <div className="bg-white px-5 py-5 border-2 border-gray-100 border-solid">
       <div className="flex items-center justify-between mb-1">
         <h2 className="text-2xl text-blue-600 font-medium capitalize"><Link to="/jobs/id">{title}</Link></h2>
-        <p className="bg-blue-500 rounded-sm text-white p-2">{type}</p>
+        <p className="text-blue-600 bg-blue-50 rounded-sm p-2 capitalize">{type}</p>
       </div>
       <h3 className="text-md text-gray-900">{company + ', ' + location}</h3>
       <p className="mt-2 text-gray-900">Experienced : Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit dolorum fuga aut necessitatibus recusandae.</p>
