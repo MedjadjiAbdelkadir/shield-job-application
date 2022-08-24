@@ -3,7 +3,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import { Container } from '@components/_index'
-import Navbar from '@components/blocks/navbar'
+import { Navbar, Footer } from '@components/blocks/_index'
 import { Header, Aside } from '@pages/jobs/blocks/_index'
 
 export default function SecondLayout ({ jobTitle, children }) {
@@ -11,7 +11,7 @@ export default function SecondLayout ({ jobTitle, children }) {
     <div className="font-poppins">
       <Navbar withBg={true} extraClasses="fixed" />
       <Header jobTitle={jobTitle} />
-      <div className="bg-gray-50">
+      <div className="bg-gray-50 mb-6">
         <Container extraClasses="py-4 flex">
           <Aside />
           <main className="relative w-9/12">
@@ -19,6 +19,7 @@ export default function SecondLayout ({ jobTitle, children }) {
           </main>
         </Container>
       </div>
+      <Footer />
     </div>
   )
 }
