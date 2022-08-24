@@ -5,9 +5,9 @@ import PropTypes from 'prop-types'
 
 import { Container } from '@components/_index'
 
-export default function Navbar ({ withBg }) {
+export default function Navbar ({ withBg, extraClasses }) {
   return (
-    <nav className={`h-16 absolute top-0 w-full ${withBg ? 'bg-white shadow-sm text-gray-900' : 'text-white'}`}>
+    <nav className={`h-16 ${extraClasses && extraClasses} top-0 w-full z-20 ${withBg ? 'bg-white shadow-sm text-gray-900' : 'text-white'}`}>
         <Container extraClasses="h-full relative">
             <div className="flex justify-between align-middle items-center h-full">
                 <Link to="/" className="text-xl font-semibold">Shield</Link>
@@ -26,5 +26,6 @@ export default function Navbar ({ withBg }) {
 }
 
 Navbar.propTypes = {
-  withBg: PropTypes.bool
+  withBg: PropTypes.bool,
+  extraClasses: PropTypes.string
 }

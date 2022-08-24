@@ -7,7 +7,7 @@ import Navbar from '@components/blocks/navbar'
 export default function MainLayout ({ children }) {
   return (
     <div className="font-poppins">
-      <Navbar />
+      <Navbar extraClasses="absolute" />
       <main>
         {children}
       </main>

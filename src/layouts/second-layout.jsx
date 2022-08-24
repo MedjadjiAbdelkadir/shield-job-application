@@ -9,12 +9,12 @@ import { Header, Aside } from '@pages/jobs/blocks/_index'
 export default function SecondLayout ({ jobTitle, children }) {
   return (
     <div className="font-poppins">
-      <Navbar withBg={true} />
+      <Navbar withBg={true} extraClasses="fixed" />
       <Header jobTitle={jobTitle} />
-      <div className='bg-gray-50'>
-        <Container extraClasses='flex py-4'>
+      <div className="bg-gray-50">
+        <Container extraClasses="py-4 flex">
           <Aside />
-          <main className="min-h-screen w-9/12">
+          <main className="relative w-9/12">
             {children}
           </main>
         </Container>
