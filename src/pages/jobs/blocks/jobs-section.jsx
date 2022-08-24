@@ -45,6 +45,7 @@ const jobsList = [
 export default function JobsSection () {
   return (
     <section className='flex flex-col gap-4 px-4'>
+      <SearchCard />
       {
         jobsList.map((job, index) => (<JobCard key={index} {...job} />))
       }
@@ -61,6 +62,21 @@ const JobCard = ({ title, company, location, type }) => {
       </div>
       <h3 className="text-md text-gray-900">{company + ', ' + location}</h3>
       <p className="mt-2 text-gray-900">Experienced : Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit dolorum fuga aut necessitatibus recusandae.</p>
+    </div>
+  )
+}
+
+const SearchCard = () => {
+  return (
+    <div className="bg-white px-5 py-5 border-2 border-gray-100 border-solid">
+      <div className="relative">
+        <input type="text" placeholder='search' className="py-2 px-3 w-full bg-gray-50 rounded-md text-lg border-2 border-solid border-gray-100" />
+        <button className="py-3 px-3 bg-blue-600 text-white absolute top-0 right-0 rounded-sm">Search</button>
+      </div>
+      <div className="flex justify-between mt-3">
+        <Link to="/" className="text-blue-600 text-sm">Back to all jobs</Link>
+        <p className="text-gray-700 text-sm"><b>34</b> jobs found</p>
+      </div>
     </div>
   )
 }
