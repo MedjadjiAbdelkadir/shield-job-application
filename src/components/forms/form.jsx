@@ -9,7 +9,7 @@ export default function Form ({ initialValues, validationSchema, children }) {
       initialValues={initialValues}
       validationSchema={validationSchema}
       onSubmit={(values, actions) => {
-        // handelSubmit(values, actions)
+        console.log('values:', values)
       }}
     >
       {children}

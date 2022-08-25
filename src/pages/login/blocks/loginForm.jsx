@@ -22,9 +22,6 @@ export default function LoginForm () {
           <MyForm
             initialValues={initialValues}
             validationSchema={validationSchema}
-            onSubmit={(values, actions) => {
-              console.log('values:', values)
-            }}
           >
             {
               () => {
@@ -32,7 +29,7 @@ export default function LoginForm () {
                   <Form>
                     <Input label="email" name="email" type="email" placeholder="exmple@gmail.com"/>
                     <Input label="password" name="password" type="password" placeholder="password"/>
-                    <button className="bg-blue-500 hover:bg-blue-700 duration-200 ease-linear text-white px-6 py-2.5 rounded-sm font-medium w-full mt-2">Signin</button>
+                    <button type="submit" className="bg-blue-500 hover:bg-blue-700 duration-200 ease-linear text-white px-6 py-2.5 rounded-sm font-medium w-full mt-2">Signin</button>
                   </Form>
                 )
               }
