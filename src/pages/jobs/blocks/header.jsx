@@ -6,7 +6,7 @@ import { Container } from '@components/_index'
 
 export default function Header ({ jobTitle }) {
   return (
-    <header className="mt-16 py-3 bg-blue-900">
+    <header className="py-3 bg-blue-900">
       <Container>
         <h1 className="text-2xl font-medium text-white">{jobTitle} in Algeria</h1>
       </Container>
