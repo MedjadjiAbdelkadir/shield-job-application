@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
+import ReactPaginate from 'react-paginate'
 
 const jobsList = [
   {
@@ -35,7 +36,7 @@ const jobsList = [
     type: 'full time'
   },
   {
-    title: 'frontend developer',
+    title: 'backend developer',
     company: 'Shield',
     location: 'New York',
     type: 'full time'
@@ -43,12 +44,48 @@ const jobsList = [
 ]
 
 export default function JobsSection () {
+  const [currentItems, setCurrentItems] = useState(null)
+  const [pageCount, setPageCount] = useState(0)
+  const [itemOffset, setItemOffset] = useState(0)
+  const itemsPerPage = 3
+
+  useEffect(() => {
+    // Fetch items from another resources.
+    const endOffset = itemOffset + itemsPerPage
+    console.log(`Loading items from ${itemOffset} to ${endOffset}`)
+    setCurrentItems(jobsList.slice(itemOffset, endOffset))
+    setPageCount(Math.ceil(jobsList.length / itemsPerPage))
+  }, [itemOffset, itemsPerPage])
+
+  const handlePageClick = (event) => {
+    const newOffset = (event.selected * itemsPerPage) % jobsList.length
+    console.log(
+      `User requested page number ${event.selected}, which is offset ${newOffset}`
+    )
+    setItemOffset(newOffset)
+  }
+
   return (
     <section className='flex flex-col gap-4 px-4'>
       <SearchCard />
       {
-        jobsList.map((job, index) => (<JobCard key={index} {...job} />))
+        currentItems.map((job, index) => (<JobCard key={index} {...job} />))
       }
+      <ReactPaginate
+        breakLabel="..."
+        nextLabel=">"
+        onPageChange={handlePageClick}
+        pageRangeDisplayed={5}
+        pageCount={pageCount}
+        previousLabel="<"
+        renderOnZeroPageCount={null}
+        className="flex items-center gap-2 justify-center text-gray-900"
+        pageClassName="text-md bg-white rounded-md w-8 h-8 flex justify-center items-center"
+        activeClassName="bg-blue-600 text-white"
+        previousClassName="text-gray-900 text-lg h-8 w-8 flex justify-center items-center"
+        nextClassName="text-gray-900 text-lg h-8 w-8 flex justify-center items-center"
+        disabledLinkClassName="text-gray-400 cursor-not-allowed"
+      />
     </section>
   )
 }
