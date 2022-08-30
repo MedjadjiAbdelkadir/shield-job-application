@@ -50,26 +50,21 @@ export default function JobsSection () {
   const itemsPerPage = 3
 
   useEffect(() => {
-    // Fetch items from another resources.
     const endOffset = itemOffset + itemsPerPage
-    console.log(`Loading items from ${itemOffset} to ${endOffset}`)
     setCurrentItems(jobsList.slice(itemOffset, endOffset))
     setPageCount(Math.ceil(jobsList.length / itemsPerPage))
   }, [itemOffset, itemsPerPage])
 
   const handlePageClick = (event) => {
     const newOffset = (event.selected * itemsPerPage) % jobsList.length
-    console.log(
-      `User requested page number ${event.selected}, which is offset ${newOffset}`
-    )
     setItemOffset(newOffset)
   }
 
   return (
-    <section className='flex flex-col gap-4 px-4'>
+    <section className='flex flex-col gap-4 lg:px-4'>
       <SearchCard />
       {
-        currentItems.map((job, index) => (<JobCard key={index} {...job} />))
+        currentItems && currentItems.map((job, index) => (<JobCard key={index} {...job} />))
       }
       <ReactPaginate
         breakLabel="..."
@@ -106,9 +101,13 @@ const JobCard = ({ title, company, location, type }) => {
 const SearchCard = () => {
   return (
     <div className="bg-white px-5 py-5 border-2 border-gray-100 border-solid">
-      <div className="relative">
-        <input type="text" placeholder='search' className="py-2 px-3 w-full bg-gray-50 rounded-md text-lg border-2 border-solid border-gray-100" />
-        <button className="py-3 px-3 bg-blue-600 text-white absolute top-0 right-0 rounded-sm">Search</button>
+      <div className="relative flex items-center">
+        <input type="text" placeholder='search' className="py-2 px-3 w-10/12 lg:w-full bg-gray-50 rounded-md text-lg border-2 border-solid border-gray-100" />
+        <button className="py-3 px-3 bg-blue-600 text-white absolute top-0 right-0 rounded-sm hidden lg:block">Search</button>
+        <button className="text-blue-800 text-base p-3 lg:hidden rounded-sm flex">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" className="inline-block fill-current"><path d="M7 11h10v2H7zM4 7h16v2H4zm6 8h4v2h-4z"></path></svg>
+          Filter
+        </button>
       </div>
       <div className="flex justify-between mt-3">
         <Link to="/" className="text-blue-600 text-sm">Back to all jobs</Link>

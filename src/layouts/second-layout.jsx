@@ -14,7 +14,7 @@ export default function SecondLayout ({ jobTitle, children }) {
       <div className="bg-gray-50 mb-6">
         <Container extraClasses="py-4 flex">
           <Aside />
-          <main className="relative w-9/12">
+          <main className="relative w-full lg:w-9/12">
             {children}
           </main>
         </Container>
