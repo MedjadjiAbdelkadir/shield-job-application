@@ -24,6 +24,10 @@ const routes = [
   {
     path: '/profile',
     element: <Profile />
+  },
+  {
+    path: '*',
+    element: <div className="flex justify-center bg-gray-50 items-center h-screen text-7xl font-semibold text-gray-900">404</div>
   }
 ]
 
