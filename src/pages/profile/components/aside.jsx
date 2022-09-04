@@ -15,6 +15,9 @@ export default function Aside () {
         <li className="text-gray-600 font-medium hover:bg-gray-50 hover:text-blue-500 px-3 py-2 rounded-sm">
           <Link to="/profile/interested-jobs">My Jobs</Link>
         </li>
+        <li className="text-gray-600 font-medium hover:bg-gray-50 hover:text-blue-500 px-3 py-2 rounded-sm">
+          <Link to="/profile/security">security</Link>
+        </li>
       </ul>
       <Outlet/>
     </aside>
