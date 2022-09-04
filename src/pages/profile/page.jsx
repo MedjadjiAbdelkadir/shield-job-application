@@ -10,10 +10,10 @@ export default function Profile () {
         <title>Profile | Shield</title>
       </Head>
       <Layout>
-        {/* <Overview /> */}
-        {/* <Settings /> */}
+        <Overview />
+        <Settings />
         <Security />
-        {/* <Jobs /> */}
+        <Jobs />
       </Layout>
     </>
   )

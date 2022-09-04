@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Aside () {
   return (
-    <aside className="hidden lg:block  sticky top-4 h-screen z-20 w-4/12">
+    <aside className="hidden lg:block sticky top-4 h-screen z-20 w-4/12">
       <div className="bg-white py-2 border-2 border-gray-100 border-solid rounded-sm min-h-full">
         <h2 className="text-gray-900 text-2xl font-medium pb-2 mb-2 border-b-2 border-solid border-gray-100 px-3">Filters</h2>
         <div className="flex flex-col gap-2 py-1 px-3">
