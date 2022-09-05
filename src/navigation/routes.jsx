@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import { Home, Login, Register, Jobs, Profile } from '@pages/_index'
+const Home = React.lazy(() => import('@pages/home/page'))
+const Login = React.lazy(() => import('@pages/login/page'))
+const Register = React.lazy(() => import('@pages/register/page'))
+const Jobs = React.lazy(() => import('@pages/jobs/page'))
+const Profile = React.lazy(() => import('@pages/profile/page'))
 
 const routes = [
   {
@@ -37,10 +41,20 @@ export default function Routing () {
       <Routes>
         {
           routes.map(({ path, element }) => (
-            <Route key={path} path={path} element={element} />
+            <Route key={path} path={path} element={<Suspense fallback={<Loading/>}>
+              {element}
+            </Suspense>} />
           ))
         }
       </Routes>
     </BrowserRouter>
+  )
+}
+
+function Loading () {
+  return (
+    <div className="flex justify-center bg-gray-50 items-center h-screen text-7xl font-semibold text-gray-900">
+      <p>Loading...</p>
+    </div>
   )
 }
