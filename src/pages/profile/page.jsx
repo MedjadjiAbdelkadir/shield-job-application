@@ -1,7 +1,9 @@
 import React from 'react'
 
+import { Outlet } from 'react-router-dom'
+
 import Head from '@components/head'
-import { Layout, Overview, Settings, Jobs, Security } from './components/_index'
+import { Layout } from './components/_index'
 
 export default function Profile () {
   return (
@@ -10,10 +12,7 @@ export default function Profile () {
         <title>Profile | Shield</title>
       </Head>
       <Layout>
-        <Overview />
-        <Settings />
-        <Security />
-        <Jobs />
+        <Outlet />
       </Layout>
     </>
   )

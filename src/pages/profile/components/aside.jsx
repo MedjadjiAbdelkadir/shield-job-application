@@ -1,22 +1,27 @@
 import React from 'react'
 
-import { Link } from 'react-router-dom'
+import { NavLink, useMatch } from 'react-router-dom'
 
 export default function Aside () {
+  const isActiveLink = (location) => {
+    return useMatch(location)
+  }
   return (
     <aside className="hidden lg:block w-2/12 bg-white p-3 border-r-2 border-gray-100 border-solid sticky top-16 h-screen z-20">
       <ul className="flex flex-col">
-        <li className="text-gray-600 font-medium hover:bg-gray-50 hover:text-blue-500 px-3 py-2 rounded-sm">
-          <Link to="/profile">Overview</Link>
+        <li>
+          <NavLink
+            className={isActiveLink('/profile') ? 'bg-gray-50 text-blue-500 px-3 py-2 w-full block font-medium' : 'text-gray-600 px-3 py-2 w-full block font-medium hover:bg-gray-50 hover:text-blue-500'}
+            to="/profile">Overview</NavLink>
         </li>
-        <li className="text-gray-600 font-medium hover:bg-gray-50 hover:text-blue-500 px-3 py-2 rounded-sm">
-          <Link to="/profile/settings">Settings</Link>
+        <li>
+          <NavLink className={isActiveLink('/profile/settings') ? 'bg-gray-50 text-blue-500 px-3 py-2 w-full block font-medium' : 'text-gray-600 px-3 py-2 w-full block font-medium hover:bg-gray-50 hover:text-blue-500'} to="/profile/settings">Settings</NavLink>
         </li>
-        <li className="text-gray-600 font-medium hover:bg-gray-50 hover:text-blue-500 px-3 py-2 rounded-sm">
-          <Link to="/profile/interested-jobs">My Jobs</Link>
+        <li>
+          <NavLink className={isActiveLink('/profile/interested-jobs') ? 'bg-gray-50 text-blue-500 px-3 py-2 w-full block font-medium' : 'text-gray-600 px-3 py-2 w-full block font-medium hover:bg-gray-50 hover:text-blue-500'} to="/profile/interested-jobs">My Jobs</NavLink>
         </li>
-        <li className="text-gray-600 font-medium hover:bg-gray-50 hover:text-blue-500 px-3 py-2 rounded-sm">
-          <Link to="/profile/security">security</Link>
+        <li>
+          <NavLink className={isActiveLink('/profile/security') ? 'bg-gray-50 text-blue-500 px-3 py-2 w-full block font-medium' : 'text-gray-600 px-3 py-2 w-full block font-medium hover:bg-gray-50 hover:text-blue-500'} to="/profile/security">security</NavLink>
         </li>
       </ul>
     </aside>
