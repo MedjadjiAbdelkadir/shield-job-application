@@ -2,6 +2,7 @@ import React, { Suspense } from 'react'
 
 import { BrowserRouter, useRoutes } from 'react-router-dom'
 
+import { Overview, Security, Settings, InterestingJobs } from '@pages/profile/components/_index'
 // lazy load imports of all app pages
 const Home = React.lazy(() => import('@pages/home/page'))
 const Login = React.lazy(() => import('@pages/login/page'))
@@ -9,12 +10,6 @@ const Register = React.lazy(() => import('@pages/register/page'))
 const Jobs = React.lazy(() => import('@pages/jobs/page'))
 const Profile = React.lazy(() => import('@pages/profile/page'))
 const Job = React.lazy(() => import('@pages/job/page'))
-
-// lazy load import of profile page nested routes
-const Overview = React.lazy(() => import('@pages/profile/components/overview'))
-const Security = React.lazy(() => import('@pages/profile/components/security'))
-const Settings = React.lazy(() => import('@pages/profile/components/settings'))
-const InterestingJobs = React.lazy(() => import('@pages/profile/components/jobs'))
 
 const appRoutes = [
   {
