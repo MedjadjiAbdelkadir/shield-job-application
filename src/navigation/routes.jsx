@@ -8,6 +8,7 @@ const Login = React.lazy(() => import('@pages/login/page'))
 const Register = React.lazy(() => import('@pages/register/page'))
 const Jobs = React.lazy(() => import('@pages/jobs/page'))
 const Profile = React.lazy(() => import('@pages/profile/page'))
+const Job = React.lazy(() => import('@pages/job/page'))
 
 // lazy load import of profile page nested routes
 const Overview = React.lazy(() => import('@pages/profile/components/overview'))
@@ -52,6 +53,10 @@ const appRoutes = [
         element: <InterestingJobs />
       }
     ]
+  },
+  {
+    path: 'jobs/:id',
+    element: <Job />
   },
   {
     path: '*',
