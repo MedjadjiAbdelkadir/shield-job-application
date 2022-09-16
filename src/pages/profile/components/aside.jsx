@@ -7,7 +7,7 @@ export default function Aside () {
     return useMatch(location)
   }
   return (
-    <aside className="hidden lg:block w-2/12 bg-white p-3 border-r-2 border-gray-100 border-solid sticky top-16 h-screen z-20">
+    <aside className="hidden lg:block lg:w-3/12 xl:w-2/10 bg-white p-3 border-r-2 border-gray-100 border-solid sticky top-16 h-screen z-20">
       <ul className="flex flex-col">
         <li>
           <NavLink

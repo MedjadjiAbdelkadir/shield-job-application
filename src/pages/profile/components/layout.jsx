@@ -10,7 +10,7 @@ export default function Layout ({ children }) {
       <Navbar />
       <div className="flex pt-16 min-h-screen">
         <Aside />
-        <main className="w-full lg:w-10/12 px-3 py-3 h-full">
+        <main className="w-full lg:w-9/12 xl:w-10/12 px-3 py-3 h-full">
           {children}
         </main>
       </div>
