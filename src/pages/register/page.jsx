@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Head from '@components/head'
-import { RegisterIntro } from './blocks/_index'
+import { RegisterIntro } from './components/_index'
 
 export default function Register () {
   return (

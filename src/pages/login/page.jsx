@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Head from '@components/head'
-import { LoginForm } from './blocks/_index'
+import { LoginForm } from './components/_index'
 
 export default function Login () {
   return (

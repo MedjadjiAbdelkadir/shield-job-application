@@ -2,7 +2,7 @@ import React from 'react'
 
 import Head from '@components/head'
 import SecondLayout from '@layouts/second-layout'
-import { JobsSection } from './blocks/_index'
+import { JobsSection } from './components/_index'
 
 export default function Jobs () {
   return (
