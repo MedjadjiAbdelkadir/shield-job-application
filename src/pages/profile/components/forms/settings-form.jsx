@@ -25,7 +25,7 @@ export default function SettingsForm () {
           () => {
             return (
               <Form>
-                <div className='grid grid-cols-2 gap-3'>
+                <div className='grid grid-cols-1 lg:grid-cols-2 gap-3'>
                   <Input label="username" name="username" type="text" placeholder="username"/>
                   <Input label="phone" name="phone" type="text" placeholder="phone"/>
                   <Input label="address" name="address" type="text" placeholder="Address"/>

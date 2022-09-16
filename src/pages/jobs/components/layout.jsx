@@ -4,9 +4,9 @@ import PropTypes from 'prop-types'
 
 import { Container } from '@components/_index'
 import { Navbar, Footer } from '@components/blocks/_index'
-import { Header, Aside } from '@pages/jobs/blocks/_index'
+import { Header, Aside } from './_index'
 
-export default function SecondLayout ({ jobTitle, children }) {
+export default function Layout ({ jobTitle, children }) {
   return (
     <div className="font-poppins">
       <Navbar withBg={true} />
@@ -24,7 +24,7 @@ export default function SecondLayout ({ jobTitle, children }) {
   )
 }
 
-SecondLayout.propTypes = {
+Layout.propTypes = {
   children: PropTypes.node.isRequired,
   jobTitle: PropTypes.string.isRequired
 }

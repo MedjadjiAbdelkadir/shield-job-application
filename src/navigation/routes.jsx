@@ -29,7 +29,7 @@ const appRoutes = [
     element: <Register />
   },
   {
-    path: 'Jobs',
+    path: 'jobs',
     element: <Jobs />
   },
   {
