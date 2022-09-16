@@ -9,7 +9,7 @@ export default function Layout ({ children }) {
   return (
     <div className="font-poppins flex flex-col min-h-screen">
       <Navbar withBg={true} />
-      <div className="bg-gray-50 mb-6 flex-grow">
+      <div className="bg-gray-50 flex-grow">
         <Container extraClasses="py-4 flex">
           <main className="relative w-full lg:w-9/12">
             {children}

@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Head from '@components/head'
-import Layout from './components/layout'
+import { Layout, JobOverview, JobDetails, JobSkills, JobDescription, JobRequirements } from './components/_index'
 
 export default function Job () {
   return (
@@ -9,7 +9,13 @@ export default function Job () {
       <Head>
         <title>Single Job | Shield</title>
       </Head>
-      <Layout></Layout>
+      <Layout>
+        <JobOverview />
+        <JobDetails />
+        <JobSkills />
+        <JobDescription />
+        <JobRequirements />
+      </Layout>
     </>
   )
 }
