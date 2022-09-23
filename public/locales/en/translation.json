@@ -11,5 +11,13 @@
   "Profile.Overview": "Overview",
   "Profile.Settings": "Settings",
   "Profile.MyJobs": "My Jobs",
-  "Profile.Security": "Security"
+  "Profile.Security": "Security",
+  "Account.Settings": "Account Settings",
+  "General": "General",
+  "Save": "Save",
+  "Interesting.Jobs": "Interesting Jobs",
+  "Account.Security": "Account Security",
+  "Password": "Password",
+  "Reset.Password": "Reset Password",
+  "Change.Email": "Change Email"
 }

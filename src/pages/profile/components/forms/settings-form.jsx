@@ -2,6 +2,7 @@ import React from 'react'
 
 import { Form } from 'formik'
 import * as yup from 'yup'
+import { useTranslation } from 'react-i18next'
 
 import MyForm from '@components/forms/form'
 import Input from '@components/forms/fields/input'
@@ -14,9 +15,11 @@ const validationSchema = yup.object().shape({
 })
 
 export default function SettingsForm () {
+  const { t } = useTranslation()
+
   return (
     <>
-      <h2 className="text-gray-900 text-xl font-medium mb-3">General</h2>
+      <h2 className="text-gray-900 text-xl font-medium mb-3">{t('General')}</h2>
       <MyForm
         initialValues={initialValues}
         validationSchema={validationSchema}
@@ -30,7 +33,7 @@ export default function SettingsForm () {
                   <Input label="phone" name="phone" type="text" placeholder="phone"/>
                   <Input label="address" name="address" type="text" placeholder="Address"/>
                 </div>
-                <button type="submit" className="bg-blue-500 hover:bg-blue-700 duration-200 ease-linear text-white px-6 py-2.5 rounded-sm font-medium mt-2">Save</button>
+                <button type="submit" className="bg-blue-500 hover:bg-blue-700 duration-200 ease-linear text-white px-6 py-2.5 rounded-sm font-medium mt-2">{t('Save')}</button>
               </Form>
             )
           }

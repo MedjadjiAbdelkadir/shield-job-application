@@ -2,6 +2,7 @@ import React from 'react'
 
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 const jobsList = [
   {
@@ -43,9 +44,10 @@ const jobsList = [
 ]
 
 export default function Jobs () {
+  const { t } = useTranslation()
   return (
     <section className="px-2">
-      <h2 className="text-2xl text-gray-900 font-semibold pt-3 pb-4">Interesting Jobs</h2>
+      <h2 className="text-2xl text-gray-900 font-semibold pt-3 pb-4">{t('Interesting.Jobs')}</h2>
       <div className="p-6 bg-white border-gray-100 border-2 border-solid rounded-sm">
         <div className='flex flex-col gap-4 lg:px-4 divide-y divide-gray-200'>
           {

@@ -11,5 +11,13 @@
   "Profile.Overview": "Aperçu",
   "Profile.Settings": "Paramètres",
   "Profile.MyJobs": "Mes emplois",
-  "Profile.Security": "Sécurité"
+  "Profile.Security": "Sécurité",
+  "Account.Settings": "Paramètres du compte",
+  "General": "Général",
+  "Save": "sauvegarder",
+  "Interesting.Jobs": "Emplois intéressants",
+  "Account.Security": "Sécurité du compte",
+  "Password": "Mot de passe",
+  "Reset.Password": "réinitialiser le mot de passe",
+  "Change.Email": "Changer d'email"
 }
