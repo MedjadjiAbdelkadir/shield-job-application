@@ -14,7 +14,7 @@ export default function Overview () {
         <div>
           <h3 className="text-xl font-medium text-gray-900 capitalize mb-3">meziane khalil</h3>
           <div className="flex justify-between mb-2">
-            <p className='text-gray-600 font-medium text-md'>Profile Completion</p>
+            <p className='text-gray-600 font-medium text-md'>{t('Profile.Completion')}</p>
             <p className='text-gray-900 text-md font-medium pl-6'>50%</p>
           </div>
           <div className="bg-gray-200 h-2 rounded-md">
@@ -25,15 +25,15 @@ export default function Overview () {
       {/* details data */}
       <h3 className="text-gray-900 text-xl font-medium my-4">Profile Details</h3>
       <div className="grid grid-flow-row grid-cols-2 gap-3 justify-items-start w-3/5">
-        <p className="text-gray-600 font-medium text-md">Full Name</p>
+        <p className="text-gray-600 font-medium text-md">{t('FullName')}</p>
         <p className="text-gray-900 text-md font-medium">Meziane Khalil</p>
-        <p className="text-gray-600 font-medium text-md">Contact Phone </p>
+        <p className="text-gray-600 font-medium text-md">{t('Contact.Phone')}</p>
         <p className="text-gray-900 text-md font-medium">0656873213</p>
-        <p className="text-gray-600 font-medium text-md">Birth Date</p>
+        <p className="text-gray-600 font-medium text-md">{t('BirthDate')}</p>
         <p className="text-gray-900 text-md font-medium">10/01/2000</p>
-        <p className="text-gray-600 font-medium text-md">Email Address</p>
+        <p className="text-gray-600 font-medium text-md">{t('Email')}</p>
         <p className="text-gray-900 text-md font-medium">meziane@gmail.com</p>
-        <p className="text-gray-600 font-medium text-md">Address</p>
+        <p className="text-gray-600 font-medium text-md">{t('Address')}</p>
         <p className="text-gray-900 text-md font-medium">city cherif,Boukadir chlef</p>
       </div>
     </div>

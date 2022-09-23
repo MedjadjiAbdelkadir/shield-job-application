@@ -1,4 +1,15 @@
 {
   "header.title": "trouvez des milliers d'emplois qui correspondent à votre passion",
-  "Profile.Account.Overview": "Aperçu du compte"
+  "Profile.Account.Overview": "Aperçu du compte",
+  "Profile.Completion": "Achèvement du profil",
+  "Profile.Details": "Détails du profil",
+  "FullName": "Nom complet",
+  "Contact.Phone": "Numéro de téléphone",
+  "BirthDate": "Date de na",
+  "Email": "Email",
+  "Address": "Adresse",
+  "Profile.Overview": "Aperçu",
+  "Profile.Settings": "Paramètres",
+  "Profile.MyJobs": "Mes emplois",
+  "Profile.Security": "Sécurité"
 }

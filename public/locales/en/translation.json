@@ -1,4 +1,15 @@
 {
   "header.title": "find thousands of jobs that match your passion",
-  "Profile.Account.Overview": "Account Overview"
+  "Profile.Account.Overview": "Account Overview",
+  "Profile.Completion":"Profile Completion",
+  "Profile.Details":"Profile Details",
+  "FullName": "Full Name",
+  "Contact.Phone": "Contact Phone",
+  "BirthDate": "Birth Date",
+  "Email": "Email Address",
+  "Address": "Address",
+  "Profile.Overview": "Overview",
+  "Profile.Settings": "Settings",
+  "Profile.MyJobs": "My Jobs",
+  "Profile.Security": "Security"
 }
