@@ -2,6 +2,8 @@ import React from 'react'
 
 import { Link } from 'react-router-dom'
 
+import { SelectLanguage } from '@components/blocks/_index'
+
 export default function Navbar () {
   return (
     <nav className="h-16 z-40 bg-white shadow-sm text-gray-900 fixed top-0 w-full">
@@ -11,6 +13,7 @@ export default function Navbar () {
             {/* avatar profile */}
             <span className="w-10 h-10 inline-block bg-gray-200 rounded-full"></span>
             <p className="text-xs text-gray-900 font-medium whitespace-pre-line w-10">Meziane Khalil</p>
+            <SelectLanguage />
           </div>
       </div>
     </nav>
